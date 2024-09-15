@@ -346,7 +346,7 @@ install_ set_file_open_limit_ "Setting File Open Limit" "/tmp/file_open_limit_er
 systemd-detect-virt > /dev/null
 if [ $? -eq 0 ]; then
 	warn "Virtualization is detected, skipping some of the tunning"
-	install_ disable_tso_ "Disabling TSO" "/tmp/tso_error" tso_success
+	#install_ disable_tso_ "Disabling TSO" "/tmp/tso_error" tso_success
 else
 	install_ set_disk_scheduler_ "Setting Disk Scheduler" "/tmp/disk_scheduler_error" disk_scheduler_success
 	install_ set_ring_buffer_ "Setting Ring Buffer" "/tmp/ring_buffer_error" ring_buffer_success
